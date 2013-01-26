@@ -1,20 +1,17 @@
-Hello!
-====
+Borrowers!
+=========
 
-This is a demonstrator for [Sinatra](http://www.sinatrarb.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
+This is a mortgage and loan calculator.
 
-Use it as a boilerplate to start your own apps.
+It should help you to understand and provision the cost for your next project.
+
+Acknowledgement
+===============
+
+This is based on git@github.com:pokle/sinatra-bootstrap.git  demonstrator for [Sinatra](http://www.sinatrarb.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
+
 
 Go!
 ===
 
-Download and run sinatra-bootstrap:
-
-	git clone git@github.com:pokle/sinatra-bootstrap.git
-
-	cd sinatra-bootstrap
-    bundle install				# To install sinatra
-
-	ruby app.rb 				# To run the sample
-	
-Then open [http://localhost:4567/](http://localhost:4567/)
+It is live on [http://mutuatar.io](mutuatar.io)
