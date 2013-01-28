@@ -13,7 +13,7 @@ configure do
 end
 
 get '/' do
-  erb "hello"
+  erb "Welcome mutuatario"
 end
 
 get '/mortgage' do 
@@ -29,9 +29,10 @@ post '/mortgage' do
 end
 
 post '/loan' do
-  erb :loan, :locals => { :mortgage => request.POST }
+  erb :loan_form, :locals => { :mortgage => request.POST }
 end
 
-get '/moar' do
-    erb :result, :locals => { :username => request.GET.to_s }
+get '/about' do
+   erb "<p>Why yet another mortgage calculator?</br> Because this one is ad-free and extensible!</br> Have a look at the source on <a href=\"https://github.com/kyzh/mutuatar.io\">github</a><p>"
 end
+
