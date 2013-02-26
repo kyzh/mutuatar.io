@@ -13,7 +13,7 @@ configure do
 end
 
 get '/' do
-  erb "Welcome mutuatario"
+  erb "Welcome on mutuatario the most efficient Mortgage calcultor on the web"
 end
 
 get '/mortgage' do 
