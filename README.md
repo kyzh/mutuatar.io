@@ -8,7 +8,7 @@ It should help you to understand and provision the cost for your next project.
 Acknowledgement
 ===============
 
-This is based on git@github.com:pokle/sinatra-bootstrap.git  demonstrator for [Sinatra](http://www.sinatrarb.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
+This is based on ```https://github.com/pokle/sinatra-bootstrap```  demonstrator for [Sinatra](http://www.sinatrarb.com/) and [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
 
 
 Go!
