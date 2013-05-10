@@ -13,7 +13,8 @@ configure do
 end
 
 get '/' do
-  erb "Welcome on mutuatario the most efficient Mortgage calcultor on the web"
+  #erb "Welcome on mutuatario the most efficient Mortgage calcultor on the web"
+  redirect '/mortgage'
 end
 
 get '/mortgage' do 
@@ -33,6 +34,6 @@ post '/loan' do
 end
 
 get '/about' do
-   erb "<p>Why yet another mortgage calculator?</br> Because this one is ad-free and extensible!</br> Have a look at the source on <a href=\"https://github.com/kyzh/mutuatar.io\">github</a> </br> There is no guaranty that the numbers are right,so do _not_ use this tool as your only source of information.<p>"
+   erb "<p>Why yet another mortgage calculator?</br> Because this one is ad-free and extensible!</br> Have a look at the source on <a href=\"https://github.com/kyzh/mutuatar.io\">github</a> </br> There is no guaranty that the numbers provided here are right.</br> Do _not_ use this tool as your only source of information.<p>"
 end
 

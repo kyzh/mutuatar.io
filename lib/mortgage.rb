@@ -97,6 +97,7 @@ class Morgage
 
   def request
     # Obviously handy for debuging
+    # Could do a better job at printing debug.
     puts "property=#{@property}&deposit_rate=#{@deposit_rate}&deposit=#{@deposit}&principal=#{@principal}&interest=#{@interest}&length=#{@length}&loan_balance=#{@loan_balance}&conveyancing=#{@conveyancing}&survey=#{@survey}&monthly_interest=#{@monthly_interest}&stamp_duty=#{@stamp_duty}&monthly_repayment=#{@monthly_repayment}&interest_paid=#{@interest_paid}&capital_paid=#{@capital_paid}&upfront_paid=#{@upfront_paid}&overall_spending=#{@overall_spending}&overall_cost=#{@overall_cost}&depreciation=#{@depreciation}&depreciation_length=#{@depreciation_length}&appreciation=#{@appreciation}&appreciation_rate=#{@appreciation_rate}&repayments=#{@repayments}"
   end
 
