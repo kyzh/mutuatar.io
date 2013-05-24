@@ -1,5 +1,5 @@
 <% if defined?(mortgage) %>
-  <% m = Morgage.new(mortgage["property"].to_i,  mortgage["deposit"].to_i, mortgage["interest"].to_f, mortgage["length"].to_i, mortgage["conveyancing"].to_i, mortgage["survey"].to_i, mortgage["appreciation_rate"].to_f, mortgage["depreciation_length"].to_f,mortgage["insurance"].to_i, mortgage["rent"].to_i, mortgage["ground_lease"].to_i, mortgage["charges"].to_i, mortgage["added_value"].to_i, mortgage["occupancy"].to_i, mortgage["resell"].to_i ) %>
+  <% m = Morgage.new(property:mortgage["property"].to_i, deposit_rate:mortgage["deposit"].to_i, interest:mortgage["interest"].to_f, length:mortgage["length"].to_i, conveyancing:mortgage["conveyancing"].to_i, survey:mortgage["survey"].to_i, appreciation_rate:mortgage["appreciation_rate"].to_f, depreciation_length:mortgage["depreciation_length"].to_f, insurance:mortgage["insurance"].to_i, rent:mortgage["rent"].to_i, ground_lease:mortgage["ground_lease"].to_i, charges:mortgage["charges"].to_i, added_value:mortgage["added_value"].to_i, occupancy:mortgage["occupancy"].to_i, resell:mortgage["resell"].to_i ) %>
 <form action='/mortgage' method='post'>
   <div class="row-fluid">
     <div class="span12">

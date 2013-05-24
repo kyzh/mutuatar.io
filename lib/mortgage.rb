@@ -1,16 +1,17 @@
 class Morgage
   attr_reader :property, :deposit_rate, :deposit, :principal, :interest, :length, :loan_balance, :conveyancing, :survey, :monthly_interest, :stamp_duty, :monthly_repayment, :interest_paid, :capital_paid, :upfront_paid, :overall_spending, :overall_cost, :depreciation, :depreciation_length, :appreciation, :appreciation_rate, :insurance, :rent, :rents, :ground_lease, :charges, :added_value, :yield, :occupancy, :resell, :insurance_total, :fees, :repayments
-  def initialize (p,d,i,l,c,s,a,w,f,r,g,m,v,o,u)
-    @property            = p # opts[:a]     # Property value
-    @deposit_rate        = d
-    @deposit             = @property * (d/100.to_f)	# opts[:d] # Deposit value computed from percentage required by lender.
+
+  def initialize (options = {})
+    @property            = options[:property]           # Property value
+    @deposit_rate        = options[:deposit_rate]
+    @deposit             = @property * (@deposit_rate/100.to_f)	# Deposit value computed from percentage required by lender.
     @principal           = @property - @deposit		# Morgage sum, what will be borrowed from lender
-    @interest            = i				# Annual interest rate that are charge on the sum left to pay  
-    @length              = l				# Morgage length in months
+    @interest            = options[:interest]		# Annual interest rate that are charge on the sum left to pay  
+    @length              = options[:length]		# Morgage length in months
     @loan_balance        = @principal
-    @conveyancing        = c                		# Money spent on conveyancing http://www.theadvisory.co.uk/conveyancing-quote.php
+    @conveyancing        = options[:conveyancing]   	# Money spent on conveyancing http://www.theadvisory.co.uk/conveyancing-quote.php
     #base is between £300 - £1,200, then fees can add between 250 and 1300, then not to forget VAT on the base and some fees.
-    @survey              = s                		# At least a Basic Morgage Valuation will be required by the lender
+    @survey              = options[:survey]   		# At least a Basic Morgage Valuation will be required by the lender
     #Basic Mortgage Valuation 1‰ of the property + charge.
     #Homebuyer's Survey 2.5‰ of the property + arrangement fee
     #Building Survey 6‰ + charge. Everything needs VAT.
@@ -23,18 +24,18 @@ class Morgage
     @overall_spending    = 0
     @overall_cost        = 0 
     @depreciation        = 0
-    @depreciation_length = w
+    @depreciation_length = options[:depreciation_length]
     @appreciation        = 0
-    @appreciation_rate   = a 
-    @insurance		 = f
-    @rent		 = r
+    @appreciation_rate   = options[:appreciation_rate] 
+    @insurance		 = options[:insurance]
+    @rent		 = options[:rent]
     @rents		 = 0
-    @ground_lease	 = g
-    @charges		 = m
-    @added_value	 = v
+    @ground_lease	 = options[:ground_lease]
+    @charges		 = options[:charges]
+    @added_value	 = options[:added_value]
     @yield		 = 0
-    @occupancy		 = o
-    @resell		 = u
+    @occupancy		 = options[:occupancy]
+    @resell		 = options[:resell]
     @insurance_total	 = 0
     @fees		 = 0
     @repayments          = []
@@ -96,7 +97,6 @@ class Morgage
   end 
 
   def request
-    # Obviously handy for debuging
     # Could do a better job at printing debug.
     puts "property=#{@property}&deposit_rate=#{@deposit_rate}&deposit=#{@deposit}&principal=#{@principal}&interest=#{@interest}&length=#{@length}&loan_balance=#{@loan_balance}&conveyancing=#{@conveyancing}&survey=#{@survey}&monthly_interest=#{@monthly_interest}&stamp_duty=#{@stamp_duty}&monthly_repayment=#{@monthly_repayment}&interest_paid=#{@interest_paid}&capital_paid=#{@capital_paid}&upfront_paid=#{@upfront_paid}&overall_spending=#{@overall_spending}&overall_cost=#{@overall_cost}&depreciation=#{@depreciation}&depreciation_length=#{@depreciation_length}&appreciation=#{@appreciation}&appreciation_rate=#{@appreciation_rate}&repayments=#{@repayments}"
   end
