@@ -13,8 +13,8 @@ configure do
 end
 
 get '/' do
-  #erb "Welcome on mutuatario the most efficient Mortgage calcultor on the web"
-  redirect '/mortgage'
+  erb "An add free, tracking free, open source mortgage calculator!"
+  #redirect '/mortgage'
 end
 
 get '/mortgage' do 
